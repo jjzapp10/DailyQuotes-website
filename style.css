@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f5f5f5;
@@ -70,27 +71,4 @@ footer {
   padding: 1rem;
   font-size: 1rem;
   margin-top: auto;
-}
-
-/* Button styling */
-/* Styling for the "Enable Notifications" button */
-#enable-notifications {
-  display: block;
-  margin: 0 auto;
-  width: -moz-fit-content; /* Add this property for Firefox support */
-  width: fit-content;
-  padding: 1rem 2rem;
-  background-color: #333;
-  color: #f5f5f5;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-
-#enable-notifications:hover {
-  background-color: #f5f5f5;
-  color: #333;
 }

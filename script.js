@@ -30,9 +30,14 @@ const currentDayOfYear = (currentDate.getYear() % 4 == 0 && currentDate.getYear(
 const currentDayIndex = Math.floor((currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24) - 1;
 const quoteIndex = currentDayIndex % quotes.length;
 
-const quote = quotes[quoteIndex].quote;
-const author = quotes[quoteIndex].author;
+const quote = quotes[quoteIndex];
 
-document.getElementById("quote").textContent = quote;
-document.getElementById("author").textContent = `- ${author}`;
-document.getElementById("date").textContent = `Added on ${dateStr}`;
+const quoteEl = document.getElementById('quote');
+const authorEl = document.getElementById('author');
+const dateEl = document.getElementById('date');
+const enableNotificationsBtn = document.getElementById('enable-notifications');
+
+quoteEl.innerText = quote.quote;
+authorEl.innerText = `- ${quote.author}`;
+dateEl.innerText = dateStr;
+
