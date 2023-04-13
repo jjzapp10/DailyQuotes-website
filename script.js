@@ -1,23 +1,33 @@
 const quotes = [
   {
     quote: "The best way to predict your future is to create it.",
-    author: "Abraham Lincoln"
+    author: "Abraham Lincoln",
+    likes: 0,
+    dislikes: 0
   },
   {
     quote: "Believe you can and you're halfway there.",
-    author: "Theodore Roosevelt"
+    author: "Theodore Roosevelt",
+    likes: 0,
+    dislikes: 0
   },
   {
     quote: "Strive not to be a success, but rather to be of value.",
-    author: "Albert Einstein"
+    author: "Albert Einstein",
+    likes: 0,
+    dislikes: 0
   },
   {
     quote: "The only way to do great work is to love what you do.",
-    author: "Steve Jobs"
+    author: "Steve Jobs",
+    likes: 0,
+    dislikes: 0
   },
   {
     quote: "You miss 100% of the shots you don’t take.",
-    author: "Wayne Gretzky"
+    author: "Wayne Gretzky",
+    likes: 0,
+    dislikes: 0
   }
 ];
 
@@ -36,8 +46,23 @@ const quoteEl = document.getElementById('quote');
 const authorEl = document.getElementById('author');
 const dateEl = document.getElementById('date');
 const enableNotificationsBtn = document.getElementById('enable-notifications');
+const likeBtn = document.getElementById('like');
+const dislikeBtn = document.getElementById('dislike');
+const likeCountEl = document.getElementById('like-count');
+const dislikeCountEl = document.getElementById('dislike-count');
 
 quoteEl.innerText = quote.quote;
 authorEl.innerText = `- ${quote.author}`;
 dateEl.innerText = dateStr;
+likeCountEl.innerText = quote.likes;
+dislikeCountEl.innerText = quote.dislikes;
 
+likeBtn.addEventListener('click', () => {
+  quote.likes++;
+  likeCountEl.innerText = quote.likes;
+});
+
+dislikeBtn.addEventListener('click', () => {
+  quote.dislikes++;
+  dislikeCountEl.innerText = quote.dislikes;
+});
